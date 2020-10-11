@@ -1,0 +1,14 @@
+<launch>
+  
+   <arg name="value" default="3.5" />
+   <arg name="time_span" default="10.5" />
+   <arg name="rate1" default="1.2" />
+   <arg name="rate2" default="-1.2" />
+   <node pkg="value_gradually" type="value_gradually" name="value_gradually" output="screen">
+        <param name="value" value="$(arg value)"/>
+        <param name="time_span" value="$(arg time_span)"/>
+        <param name="rate1" value="$(arg rate1)"/>
+        <param name="rate2" value="$(arg rate2)"/>
+   </node>
+</launch>
+
